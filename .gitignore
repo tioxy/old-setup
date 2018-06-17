@@ -1,0 +1,8 @@
+# Vagrant
+.vagrant/
+*.logs
+Vagrantfile
+
+
+# Ansible
+*.retry
