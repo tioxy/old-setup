@@ -5,3 +5,5 @@
   roles:
     - linux_language
     - official_packages
+    - pip_requirements
+    - git_configure
