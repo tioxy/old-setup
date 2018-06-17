@@ -1,0 +1,12 @@
+---
+- name: Updating cache and packages
+  command: yaourt -Syu
+
+
+- name: Installing packages from Official Arch Repo
+  command: "yaourt -S --noconfirm {{ item }}"
+  loop: "{{ OFFICIAL_PACKAGES_AVAILABLE }}}"
+
+
+- name: Updating final cache and packages
+  command: yaourt -Syu
