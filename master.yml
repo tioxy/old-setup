@@ -1,9 +1,10 @@
 ---
-- hosts: localhost
+- hosts: all
   become: true
 
   roles:
-    - linux_language
-    - official_packages
+    #- linux_language
+    #- official_packages
     - pip_packages
-    - git_configure
+    #- git_configure
+    - golang_packages
