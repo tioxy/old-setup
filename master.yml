@@ -5,6 +5,7 @@
   roles:
     - linux_language
     - official_packages
+    - unofficial_packages
     - git_configure
     - pip_packages
     - golang_packages
