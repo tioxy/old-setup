@@ -1,0 +1,8 @@
+---
+- name: Disabling Atom welcome screen
+  command: apm disable welcome
+
+
+- name: Installing Atom packages
+  command: "apm install {{ item }}"
+  loop: "{{ ATOM_PACKAGES }}"
