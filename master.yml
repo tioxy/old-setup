@@ -3,8 +3,9 @@
   become: true
 
   roles:
-    #- linux_language
-    #- official_packages
+    - linux_language
+    - official_packages
+    - git_configure
     - pip_packages
-    #- git_configure
     - golang_packages
+    - atom_packages
