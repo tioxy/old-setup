@@ -1,0 +1,15 @@
+---
+- name: Updating cache and packages
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: Installing packages from Official Arch Repo
+  pacman:
+    name: "{{ OFFICIAL_PACKAGES_AVAILABLE }}}"
+    state: latest
+
+- name: Updating final cache and packages
+  pacman:
+    update_cache: yes
+    upgrade: yes

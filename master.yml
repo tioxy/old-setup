@@ -4,3 +4,4 @@
 
   roles:
     - linux_language
+    - official_packages
