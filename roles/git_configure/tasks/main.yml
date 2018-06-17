@@ -1,0 +1,16 @@
+---
+- name: Configuring git name
+  command: git config --global user.name "{{ GIT_NAME }}"
+
+
+- name: Configuring git email
+  command: git config --global user.email "{{ GIT_EMAIL }}"
+
+
+- name: Configuring ssh config
+  template:
+    src: ssh_config.j2
+    dest: {{ PERSONAL_USER_HOME }}/.ssh/config
+    mode: 0644
+    owner: {{ PERSONAL_USER }}
+    group: {{ PERSONAL_USER }}
