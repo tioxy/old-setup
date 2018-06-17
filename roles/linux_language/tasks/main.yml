@@ -1,5 +1,4 @@
 ---
-
 - name: Setting keyboard language
   command: setxkbmap -model {{ KEYBOARD_MODEL }} -layout {{ KEYBOARD_LAYOUT }}
 
