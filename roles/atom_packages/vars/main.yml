@@ -15,6 +15,7 @@ ATOM_PACKAGES:
   - language-groovy
   - language-jenkinsfile
   - language-kotlin
+  - language-nginx
   - language-terraform
   - linter
   - linter-flake8
