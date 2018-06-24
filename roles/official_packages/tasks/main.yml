@@ -7,7 +7,7 @@
 
 - name: Installing packages from Official Arch Repo
   pacman:
-    name: "{{ OFFICIAL_PACKAGES_AVAILABLE }}}"
+    name: "{{ OFFICIAL_PACKAGES_AVAILABLE }}"
     state: present
 
 
