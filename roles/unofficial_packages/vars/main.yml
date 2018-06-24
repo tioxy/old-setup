@@ -1,6 +1,7 @@
 ---
 UNOFFICIAL_PACKAGES_AVAILABLE:
+  - kubectl-bin
+  - papirus-icon-theme
+  - skypeforlinux-stable-bin
   - slack-desktop
   - spotify
-  - skypeforlinux-stable-bin
-  - kubectl-bin
