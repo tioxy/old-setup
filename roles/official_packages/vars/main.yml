@@ -12,6 +12,7 @@ OFFICIAL_PACKAGES_AVAILABLE:
   - jq
   - nmap
   - openvpn
+  - pacaur
   - pwgen
   - python-pip
   - strace
@@ -23,4 +24,3 @@ OFFICIAL_PACKAGES_AVAILABLE:
   - virtualbox
   - virtualbox-host-modules-arch
   - vlc
-  - yaourt
