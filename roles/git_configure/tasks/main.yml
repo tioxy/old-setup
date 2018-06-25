@@ -10,6 +10,5 @@
 - name: Configuring ssh config
   template:
     src: ssh_config.j2
-    dest: "{{ PERSONAL_USER_HOME }}/.ssh/config"
+    dest: "~/.ssh/config"
     mode: 0644
-    owner: "{{ PERSONAL_USER }}"
