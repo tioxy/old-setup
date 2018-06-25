@@ -31,7 +31,7 @@
   become_user: aur_builder
 
 
-- name: Installing packages from Official Arch Repo
+- name: Installing packages from AUR Repo
   aur:
     name: "{{ UNOFFICIAL_PACKAGES_AVAILABLE }}"
     skip_installed: true
