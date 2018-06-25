@@ -1,0 +1,20 @@
+---
+- name: Creating Atom folder
+  file:
+    path: ~/.atom/
+    state: directory
+
+
+- name: Copying Atom config.cson
+  copy:
+    src: "{{ role_path }}/files/config.cson"
+    dest: ~/.atom/config.cson
+
+
+- name: Disabling Atom welcome screen
+  command: apm disable welcome
+
+
+- name: Installing Atom packages
+  command: "apm install {{ item }}"
+  loop: "{{ ATOM_PACKAGES }}"

@@ -1,0 +1,48 @@
+---
+- name: Create user for aur_builder
+  user:
+    name: aur_builder
+    group: wheel
+
+
+- name: Giving permissions to aur_builder
+  lineinfile:
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    validate: 'visudo -cf %s'
+
+
+- name: __FIX color --never problem__ Adding color to pacman conf
+  lineinfile:
+    dest: /etc/pacman.conf
+    regexp: "{{ item.old }}"
+    line: "{{ item.new }}"
+    state: present
+  with_items:
+    - { old: '#Color' , new: 'Color' }
+
+
+- name: Updating cache and packages
+  aur:
+    upgrade: yes
+    use: pacaur
+  become_user: aur_builder
+  become: true
+
+
+- name: Installing packages from AUR Repo
+  aur:
+    name: "{{ UNOFFICIAL_PACKAGES_AVAILABLE }}"
+    skip_installed: true
+    use: pacaur
+  become_user: aur_builder
+  become: true
+
+
+- name: Updating final cache and packages
+  aur:
+    upgrade: yes
+    use: pacaur
+  become_user: aur_builder
+  become: true

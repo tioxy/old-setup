@@ -1,0 +1,26 @@
+---
+OFFICIAL_PACKAGES_AVAILABLE:
+  - ansible
+  - atom
+  - aws-cli
+  - docker
+  - docker-compose
+  - gcc
+  - git
+  - go
+  - iperf
+  - jq
+  - nmap
+  - openvpn
+  - pacaur
+  - pwgen
+  - python-pip
+  - strace
+  - tcpdump
+  - terminator
+  - terraform
+  - vagrant
+  - vim
+  - virtualbox
+  - virtualbox-host-modules-arch
+  - vlc

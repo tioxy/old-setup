@@ -1,0 +1,27 @@
+---
+ATOM_PACKAGES:
+  - atom-material-syntax
+  - atom-material-ui
+  - autocomplete-python
+  - busy-signal
+  - django-templates
+  - file-icons
+  - go-debug
+  - go-plus
+  - go-signature-statusbar
+  - intentions
+  - language-ansible
+  - language-docker
+  - language-groovy
+  - language-jenkinsfile
+  - language-kotlin
+  - language-nginx
+  - language-terraform
+  - linter
+  - linter-flake8
+  - linter-pep8
+  - linter-terraform-syntax
+  - linter-ui-default
+  - minimap
+  - python-autopep8
+  - sort-lines

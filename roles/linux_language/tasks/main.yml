@@ -1,0 +1,28 @@
+---
+- name: Setting keyboard language
+  command: setxkbmap -model {{ KEYBOARD_MODEL }} -layout {{ KEYBOARD_LAYOUT }}
+
+
+- name: Removing language comment from /etc/locale.gen
+  lineinfile:
+    dest: /etc/locale.gen
+    regexp: "{{ item.old }}"
+    line: "{{ item.new }}"
+    state: present
+  with_items:
+    - { old: '#{{ DESIRED_OS_LANGUAGE }} UTF-8' , new: '{{ DESIRED_OS_LANGUAGE }} UTF-8' }
+
+
+- name: Making language available to be generated
+  command: locale-gen "{{ DESIRED_OS_LANGUAGE }}"
+
+- name: Unbinding current language
+  shell: unset LANG
+
+
+- name: Setting new language
+  command: localectl set-locale LANG={{ DESIRED_OS_LANGUAGE }}
+
+
+- name: Activating new language
+  shell: source /etc/profile.d/locale.sh

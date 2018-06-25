@@ -1,0 +1,11 @@
+---
+GOLANG_PACKAGES:
+  - github.com/derekparker/delve/cmd/dlv
+  - golang.org/x/tools/cmd/goimports
+  - golang.org/x/tools/cmd/gorename
+  - github.com/sqs/goreturns
+  - github.com/nsf/gocode
+  - github.com/alecthomas/gometalinter
+  - github.com/zmb3/gogetdoc
+  - github.com/rogpeppe/godef
+  - golang.org/x/tools/cmd/guru

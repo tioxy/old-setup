@@ -1,0 +1,4 @@
+---
+- name: Installing go packages
+  command: go get -u {{ item }}
+  loop: "{{ GOLANG_PACKAGES }}"

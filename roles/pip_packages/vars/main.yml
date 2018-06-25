@@ -1,0 +1,17 @@
+---
+PIP_PACKAGES:
+  - boto3
+  - datetime
+  - django
+  - envparse
+  - flake8
+  - flask
+  - jedi
+  - numpy
+  - pandas
+  - pep8
+  - pipenv
+  - pipreqs
+  - pytest
+  - requests
+  - virtualenv
