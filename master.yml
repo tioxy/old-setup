@@ -6,6 +6,6 @@
     - { role: official_packages, become: yes }
     - { role: unofficial_packages, become: yes }
     - { role: git_configure }
-    #- { role: pip_packages, become: yes }
-    #- { role: golang_packages }
-    #- { role: atom_packages }
+    - { role: pip_packages, become: yes }
+    - { role: golang_packages }
+    - { role: atom_packages }
