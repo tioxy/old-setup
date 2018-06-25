@@ -13,6 +13,16 @@
     validate: 'visudo -cf %s'
 
 
+- name: __FIX color --never problem__ Adding color to pacman conf
+  lineinfile:
+    dest: /etc/pacman.conf
+    regexp: "{{ item.old }}"
+    line: "{{ item.new }}"
+    state: present
+  with_items:
+    - { old: '#Color' , new: 'Color' }
+
+
 - name: Updating cache and packages
   aur:
     upgrade: yes
@@ -21,7 +31,7 @@
   become_user: aur_builder
 
 
-- name: Installing packages from Official Arch Repo
+- name: Installing packages from AUR Repo
   aur:
     name: "{{ UNOFFICIAL_PACKAGES_AVAILABLE }}"
     skip_installed: true
