@@ -1,0 +1,13 @@
+"*":
+  core:
+    disabledPackages: [
+      "welcome"
+      "language-gfm"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  "exception-reporting":
+    userId: "7ab1adb0-eb00-40ae-aaa0-7e61f826e4a3"
