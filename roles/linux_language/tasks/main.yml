@@ -1,4 +1,5 @@
 ---
+become: true
 - name: Setting keyboard language
   command: setxkbmap -model {{ KEYBOARD_MODEL }} -layout {{ KEYBOARD_LAYOUT }}
 
@@ -15,7 +16,6 @@
 
 - name: Making language available to be generated
   command: locale-gen "{{ DESIRED_OS_LANGUAGE }}"
-
 
 - name: Unbinding current language
   shell: unset LANG

@@ -1,4 +1,5 @@
 ---
+become: true
 - name: Updating cache and packages
   pacman:
     update_cache: yes
