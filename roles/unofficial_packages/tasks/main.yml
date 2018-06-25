@@ -1,9 +1,9 @@
 ---
-become: true
 - name: Create user for aur_builder
   user:
     name: aur_builder
     group: wheel
+
 
 - name: Giving permissions to aur_builder
   lineinfile:
@@ -11,6 +11,7 @@ become: true
     line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
     create: yes
     validate: 'visudo -cf %s'
+
 
 - name: __FIX color --never problem__ Adding color to pacman conf
   lineinfile:
@@ -27,6 +28,7 @@ become: true
     upgrade: yes
     use: pacaur
   become_user: aur_builder
+  become: true
 
 
 - name: Installing packages from AUR Repo
@@ -35,6 +37,7 @@ become: true
     skip_installed: true
     use: pacaur
   become_user: aur_builder
+  become: true
 
 
 - name: Updating final cache and packages
@@ -42,3 +45,4 @@ become: true
     upgrade: yes
     use: pacaur
   become_user: aur_builder
+  become: true

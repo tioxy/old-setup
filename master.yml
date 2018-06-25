@@ -2,10 +2,10 @@
 - hosts: all
 
   roles:
-    - linux_language
-    - official_packages
-    - unofficial_packages
-    #- git_configure
-    #- pip_packages
-    #- golang_packages
-    #- atom_packages
+    - { role: linux_language, become: yes }
+    - { role: official_packages, become: yes }
+    - { role: unofficial_packages, become: yes }
+    - { role: git_configure }
+    #- { role: pip_packages, become: yes }
+    #- { role: golang_packages }
+    #- { role: atom_packages }

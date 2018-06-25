@@ -1,7 +1,7 @@
 ---
 GIT_EMAIL: gabrieltiossi@gmail.com
 GIT_NAME: Gabriel Tiossi
-GIT_PEM_PATH: /home/tioxy/Keys/tioxy_latest.pem
+GIT_PEM_PATH: ~/Keys/tioxy_latest.pem
 
 PERSONAL_USER_HOME: /home/tioxy
 PERSONAL_USER: tioxy
