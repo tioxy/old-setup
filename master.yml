@@ -5,8 +5,8 @@
   roles:
     #- linux_language
     #- official_packages
-    - unofficial_packages
-    #- git_configure
+    #- unofficial_packages
+    - git_configure
     #- pip_packages
     #- golang_packages
     #- atom_packages
