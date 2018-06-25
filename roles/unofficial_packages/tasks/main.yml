@@ -13,7 +13,7 @@
     validate: 'visudo -cf %s'
 
 
-- name: [FIX color --never] Adding color to pacman conf
+- name: |FIX color --never problem| Adding color to pacman conf
   lineinfile:
     dest: /etc/pacman.conf
     regexp: "{{ item.old }}"
