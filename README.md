@@ -1,6 +1,9 @@
 # TIOXY - Ansible setup
 My first-setup-as-code
-Only supported distro is **Antergos**(Arch based)
+Only supported distro is **Antergos**(Arch based) at the moment.
+<br/>
+**.bashrc** file is located at [http://bashrc.tioxy.com](http://bashrc.tioxy.com)
+
 
 ## Installation
 
